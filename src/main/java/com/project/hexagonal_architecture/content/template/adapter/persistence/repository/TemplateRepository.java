@@ -20,9 +20,8 @@ public class TemplateRepository implements TemplateRepositoryPort {
 
     @Override
     public TemplateEntity create(TemplateEntity template) {
-        TemplateEntity savedInstance = new TemplateEntity();
-        entityManager.persist(savedInstance);
-        return savedInstance;
+        entityManager.persist(template);
+        return template;
     }
 
     @Override
